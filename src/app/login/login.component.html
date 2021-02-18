@@ -1,0 +1,24 @@
+<div class='container'>
+  <div class="form-wrapper">
+    <form nz-form [formGroup]="validateForm" class="login-form">
+      <p>登录</p>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your username!">
+          <nz-input-group nzPrefixIcon="user">
+            <input type="text" nz-input formControlName="userName" placeholder="Username" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input type="password" nz-input formControlName="password" placeholder="Password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    
+      <button nz-button nzType="primary" (click)="login()">Log In</button>
+      Or <a> register now! </a>
+    </form>
+  </div>
+</div>

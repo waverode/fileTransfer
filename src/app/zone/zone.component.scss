@@ -1,0 +1,69 @@
+.container {
+    width: 100%;
+    height: 100%;
+    .tab-wrapper {
+        width: 100%;
+        height: 30px;
+        border-bottom: 1px solid grey;
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                margin: 0 10px;
+                background-color: #eeeeee;
+                border-radius: 20px;
+                cursor: pointer;
+                p {
+                    display: inline-block;
+                    margin: 0 10px;
+                    // font-weight: bold;
+                }
+                [nz-icon] {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .content-wrapper {
+        width: 100%;
+        height: 100%;
+        ul {
+            width: 100%;
+            display: flex;
+            list-style: none;
+            margin: 0;
+            margin-top: 20px;
+            padding: 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            li {
+                width: 120px;
+                height: 120px;
+                border: 0.5px solid #eeeeee;
+                margin-bottom: 20px;
+                margin-left: 50px;
+                padding: 0;
+                text-align: center;
+                cursor: pointer;
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+                p {
+                    line-height: 40px;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+            li:hover {
+                background-color: #ffeeee;
+            }
+        }
+    }
+}

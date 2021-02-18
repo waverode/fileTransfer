@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="header-wrapper">
+    <a [routerLink]="[ '/zone/main' ]">
+      <i nz-icon nzType="left" nzTheme="outline"></i>
+    </a>
+    <p>联系人</p>
+    <button>
+      <i nz-icon nzType="ellipsis" nzTheme="outline" (click)="openDetail()"></i>
+    </button>
+   
+  </div>
+  <div class="context-wrapper">
+    <ul class="chat-list">
+      <li class="list-item-left">
+        <nz-avatar nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste sed porro, voluptates totam nam architecto voluptatem explicabo rem officia at blanditiis, quasi, inventore dignissimos sequi aut iusto animi quo?</p>
+      </li>
+      <li class="list-item-right">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste sed porro, voluptates totam nam architecto voluptatem explicabo rem officia at blanditiis, quasi, inventore dignissimos sequi aut iusto animi quo?</p>
+      </li>
+    </ul>
+  </div>
+  <div class="inputBar-wrapper">
+    <button>
+      <i nz-icon nzType="plus-circle" nzTheme="outline"></i>
+    </button>
+    <input nz-input placeholder="borderless" nzBorderless />
+    <button>
+      <i nz-icon nzType="send" nzTheme="outline"></i>
+    </button>
+  </div>
+  <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzTitle="Basic Drawer" (nzOnClose)="close()">
+    <ng-container *nzDrawerContent>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+    </ng-container>
+  </nz-drawer>
+</div>

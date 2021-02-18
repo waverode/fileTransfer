@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="list-wrapper">
+    <nz-table #basicTable [nzData]="dataSet">
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Size</th>
+          <th nzWidth='300px'>Progress</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of basicTable.data; index as i">
+          <td>{{data.name}}</td>
+          <td>{{data.size}}</td>
+          <td></td>
+          <td>
+            <a (click)="pausedItem(i)">
+              <i nz-icon [nzType]=" !data.ispaused? 'pause' : 'caret-right'" nzTheme="outline"></i>
+            </a>
+            <nz-divider nzType="vertical"></nz-divider>
+            <a (click)='deleteItem(i)'>
+              <i nz-icon nzType="delete" nzTheme="outline"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>

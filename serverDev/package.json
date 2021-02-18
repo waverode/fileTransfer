@@ -1,0 +1,20 @@
+{
+  "name": "serverdev",
+  "version": "1.0.0",
+  "description": "this is a server for progress to test in dev.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "weiRu",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "http-server": "^0.12.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "mysql": "^2.18.1"
+  }
+}

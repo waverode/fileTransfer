@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="tab-wrapper">
+    <ul class='tab-bar'>
+      <li >
+        <nz-upload
+          nzAction="http://localhost:3000/testUpload"
+        >
+          <i nz-icon nzType="upload" nzTheme="outline"></i>
+          <p>文件上传</p>
+        </nz-upload>
+      </li>
+      <li [routerLink]="['/downloadList']">
+        <i nz-icon nzType="download" nzTheme="outline"></i>
+        <p>下载列表 / 传输列表</p>
+      </li>
+    </ul>
+  </div>
+  <div class="content-wrapper">
+    <ul class="file-list">
+        <li *ngFor="let file of filedatas; index as i" (click)="file.children.length == 0? fileDownload() : folderclick(i) ">
+            <img [src]="file.isfile && file.children.length == 0? '../../assets/file.svg' : '../../assets/folder.svg' " [alt]="file.desc">
+            <p>{{ file.title }}</p>
+        </li>
+    </ul>
+  </div>
+
+  <nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <ng-container *nzModalContent>
+      <p>Content one</p>
+      <p>Content two</p>
+      <p>Content three</p>
+    </ng-container>
+  </nz-modal>
+</div>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>m</title>
+</head>
+<style>
+  #context{
+      border: 1px solid black;
+  }
+</style>
+<body onload="draw()">
+    <canvas id="context" width="1200px" height="800px"></canvas>
+</body>
+<script type="text/javascript">
+    function draw() {
+        let ctx = document.getElementById('context').getContext('2d');
+        ctx.strokeStyle = '#30915F';
+        for(let i=1; i<=1000; i+=20){
+            ctx.beginPath();
+            ctx.moveTo(i, 0);
+            ctx.lineTo(i, 1000);
+            ctx.stroke();
+            ctx.closePath();
+            
+            ctx.beginPath();
+            ctx.moveTo(0, i);
+            ctx.lineTo(1000, i);
+            ctx.stroke();
+            ctx.closePath();
+
+        }
+
+    }
+  
+</script>
+</html>
